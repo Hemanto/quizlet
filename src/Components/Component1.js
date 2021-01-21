@@ -3,7 +3,7 @@ import { TileContext } from './TakingData'
 
 const Component1 = () => {
     const inputdata = useContext(TileContext);
-    const [inputdata, setInputdata] = useContext(TileContext);
+    //const [inputdata, setInputdata] = useContext(TileContext);
 
     const changeState = () => {
         console.log('clcik');
