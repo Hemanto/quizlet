@@ -2,11 +2,16 @@ import React, { useContext } from 'react'
 import { TileContext } from './TakingData'
 
 const Componetns2 = () => {
-    const surName = useContext(TileContext)
+    const { inputdata, setInputdata } = useContext(TileContext);
+    const changeState = () => {
+        console.log("clcik");
+
+        setInputdata({ ...inputdata, bordOne: true });
+    };
     return (
-        <div className='componentOne'>
+        <div onClick={changeState} className='componentTne'>
             <p className='para'>
-                {surName.surName}
+                {inputdata.surName}
             </p>
         </div>
     )
