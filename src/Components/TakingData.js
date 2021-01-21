@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import Component1 from './Component1';
 import Componetns2 from './Componetns2';
-export const Title = createContext();
+export const TileContext = createContext();
 
 const TakingData = () => {
 
@@ -10,20 +10,18 @@ const TakingData = () => {
             title: '',
             surName: '',
             bordOne: true,
-            bordTwo: true
+            bordTwo: false
         }
 
     ])
-    console.log(inputdata.bordOne);
-    console.log(inputdata.title);
     return (
         <div>
             <input onChange={(e) => setInputdata({ ...inputdata, title: e.target.value })} placeholder='for first tile' />
             <input onChange={(e) => setInputdata({ ...inputdata, surName: e.target.value })} placeholder='for second tile' />
-            <Title.Provider value={inputdata}>
-                {inputdata.bordOne && <Component1 />}
-                {inputdata.bordOne && <Componetns2 />}
-            </Title.Provider>
+            <TileContext.Provider value={inputdata}>
+                {inputdata[0].bordOne ? <Component1 /> : <Componetns2 />}
+
+            </TileContext.Provider>
 
         </div>
     )

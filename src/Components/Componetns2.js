@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { Title } from './TakingData'
+import { TileContext } from './TakingData'
 
 const Componetns2 = () => {
-    const surName = useContext(Title)
+    const surName = useContext(TileContext)
     return (
         <div className='componentOne'>
             <p className='para'>

@@ -1,12 +1,21 @@
-import React, { useContext } from 'react'
-import { Title } from './TakingData'
+import React, { useContext, useState } from 'react'
+import { TileContext } from './TakingData'
 
 const Component1 = () => {
-    const title = useContext(Title)
+    const inputdata = useContext(TileContext);
+    const [inputdata, setInputdata] = useContext(TileContext);
+
+    const changeState = () => {
+        console.log('clcik');
+        //setInputdata(...inputdata)
+
+    }
+
+
     return (
-        <div className='componentOne'>
+        <div onClick={changeState} className='componentOne'>
             <p className='para'>
-                {title.title}
+                {inputdata.title}
             </p>
         </div>
     )

@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.componentOne{
+  border: 1px solid  saddlebrown ;
+  background-color: #e58de8ed;
+}
+.para{
+  padding: 200px;
+  color: black;
+}
